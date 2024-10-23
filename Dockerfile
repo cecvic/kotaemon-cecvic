@@ -12,8 +12,7 @@ RUN apt-get update -qqy && \
       libmagic-dev
 
 # Install torch and torchvision for unstructured
-RUN --mount=type=ssh \
-    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 # Install additional pip packages
 RUN pip install -e "libs/kotaemon[adv]" \
