@@ -1,4 +1,3 @@
-# Full version
 FROM lite AS full
 
 # Additional dependencies for full version
