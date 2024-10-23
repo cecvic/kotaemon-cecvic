@@ -12,14 +12,11 @@ RUN apt-get update -qqy && \
       libmagic-dev
 
 # Install torch and torchvision for unstructured
-RUN --mount=type=ssh  \
-    --mount=type=cache,id=pip-cache,target=/root/.cache/pip  \
+RUN --mount=type=ssh \
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 # Install additional pip packages
-RUN --mount=type=ssh  \
-    --mount=type=cache,id=pip-cache,target=/root/.cache/pip  \
-    pip install -e "libs/kotaemon[adv]" \
+RUN pip install -e "libs/kotaemon[adv]" \
     && pip install unstructured[all-docs]
 
 # Clean up
