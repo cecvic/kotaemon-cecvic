@@ -42,7 +42,8 @@ RUN --mount=type=ssh  \
     --mount=type=cache,target=/root/.cache/pip  \
     pip install -e "libs/kotaemon" \
     && pip install -e "libs/ktem" \
-    && pip install "pdfservices-sdk@git+https://github.com/niallcm/pdfservices-python-sdk.git@bump-and-unfreeze-requirements"
+    && pip install "pdfservices-sdk@git+https://github.com/niallcm/pdfservices-python-sdk.git@bump-and-unfreeze-requirements" \
+    && pip install multipart  # Add multipart installation here
 
 RUN --mount=type=ssh  \
     --mount=type=cache,target=/root/.cache/pip  \
