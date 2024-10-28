@@ -81,7 +81,7 @@ RUN --mount=type=ssh  \
     --mount=type=cache,target=/root/.cache/pip  \
     pip install -e "libs/kotaemon[adv]" \
     && pip install unstructured[all-docs]
-    pip install multipart
+
 
 # Clean up
 RUN apt-get autoremove \
