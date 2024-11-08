@@ -313,3 +313,8 @@ KH_INDICES = [
         "index_type": "ktem.index.file.graph.GraphRAGIndex",
     },
 ]
+
+SETTINGS_APP = {
+    "KH_FEATURE_USER_MANAGEMENT": False,
+}
+
